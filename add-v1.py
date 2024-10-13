@@ -4,10 +4,6 @@ composers = ["Mozart", "Bach", "Liszt"]
 def add(prompt, strings):
     name = input(prompt)
     strings.append(name)
-    return strings
-
-print(f"  : {ducks}")
-
 
 print("List of ducks: ", ducks)
 
