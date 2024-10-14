@@ -13,13 +13,14 @@ def view(description, strings):
 
 
 def add(prompt, strings):
-    n = 5
-    while n > 0:
-        name = input(prompt)
-        strings.append(name)
-        n += -1
-    while n == 0:
-        view("Du har matat in följande 5 strängar", strings)
-        break
+    name = input(prompt)
+    strings.append(name)
+   
 
-add("Lägg till en sträng: ", strings)
+while True:
+    if n > 0:
+        add("Lägg till en sträng: ", strings)
+        n += -1
+    else:
+        view(f"Du har matat in följande {len(strings)} strängar", strings)
+        break

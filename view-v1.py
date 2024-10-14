@@ -10,5 +10,8 @@ def view(description, strings):
         print(f"{n})  {x}")
         n +=1
 
+view("lista med namn", names)
 view("lista med djur", animals)
+
+
 
