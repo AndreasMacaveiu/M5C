@@ -1,5 +1,6 @@
 options1 = {"a":"Add item", "l":"List items", "q":"Log out"}
 options2 = {"r":"Try again", "q":"Quit"}
+users = {"nisse":"apa", "stina":"t-rex", "bosse":"ko"}
 
 def view(description, strings):
     print(description)
@@ -20,21 +21,16 @@ def login(users):
             if users[user] == guess:
                 return user
             else:
-                print ("YOU FRAUD")
-                menu("Invalid username or password", "Option", options2)
+                action = menu("Invalid username or password", "Option: ", options2)
                 if action == "q":
+                    user = None
                     break
-                else:
-                    print("ok")
         else:
-             print("You are not real")
-             menu("Invalid username or password", "Option", options2)
+             action = menu("Invalid username or password", "Option: ", options2)
              if action == "q":
-                    break
-             else:
-                 print("ok")
-users1 = {"nisse":"apa", "stina":"t-rex", "bosse":"ko"}
-user1 = login(users1)
-print(f"Welcome {user1}")
+                user = None
+                break
+
+
 
 
